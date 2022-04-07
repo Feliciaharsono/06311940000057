@@ -1,0 +1,187 @@
+<html>
+
+<head>
+    <title>Felicia Harsonoseputro - 06311940000057</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <p>ETS Visualisasi Informasi (Felicia Harsonoseputro | 06311940000057)</p>
+</head>
+
+<style>
+    body {
+        background-color: rgb(251, 221, 184);
+        color: rgb(88, 83, 77);
+        width: 105%;
+        height: 100px;
+    }
+</style>
+
+<body>
+    <div>
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <script>
+        const data = {
+            datasets: [{
+                label: 'Antropologi Sosial',
+                data: [{
+                    x: 121,
+                    y: 68,
+                    r: 36
+                }, {
+                    x: 141,
+                    y: 48,
+                    r: 40
+                }, {
+                    x: 321,
+                    y: 166,
+                    r: 24
+                }, {
+                    x: 355,
+                    y: 278,
+                    r: 60
+                }, {
+                    x: 372,
+                    y: 171,
+                    r: 28
+                }, {
+                    x: 381,
+                    y: 132,
+                    r: 40
+                }, {
+                    x: 721,
+                    y: 25,
+                    r: 23
+                }, {
+                    x: 751,
+                    y: 65,
+                    r: 56
+                }, {
+                    x: 821,
+                    y: 33,
+                    r: 16
+                }, {
+                    x: 911,
+                    y: 92,
+                    r: 18
+                }, {
+                    x: 511,
+                    y: 121,
+                    r: 25
+                }, {
+                    x: 711,
+                    y: 136,
+                    r: 40
+                }],
+                backgroundColor: 'rgb(255, 0, 100)',
+                borderColor: 'rgb(255, 0, 100)',
+            }, {
+                label: 'Antropologi Budaya',
+                data: [{
+                    x: 143,
+                    y: 77,
+                    r: 27
+                }, {
+                    x: 335,
+                    y: 95,
+                    r: 40
+                }, {
+                    x: 361,
+                    y: 169,
+                    r: 30
+                }, {
+                    x: 611,
+                    y: 46,
+                    r: 28
+                }],
+                backgroundColor: 'rgb(255, 220, 0)',
+                borderColor: 'rgb(255, 220, 0)',
+            }, {
+                label: 'Antropologi',
+                data: [{
+                    x: 112,
+                    y: 66,
+                    r: 48
+                }, {
+                    x: 333,
+                    y: 186,
+                    r: 30
+                }, {
+                    x: 731,
+                    y: 263,
+                    r: 75
+                }, {
+                    x: 543,
+                    y: 58,
+                    r: 27
+                }],
+                backgroundColor: 'rgb(255, 131, 0)',
+                borderColor: 'rgb(255, 131, 0)',
+            }]
+        };
+        const config = {
+            type: 'bubble',
+            data: data,
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Perbandingan Jumlah Daya Tampung Jurusan Antropologi di Universitas-Universitas Indonesia berdasarkan Pendaftar SBMPTN di Tahun 2019'
+                    },
+                    chartAreaBorder: {
+                        borderColor: 'rgb(254, 202, 151)',
+                        borderWidth: 2,
+                        borderDash: [5, 5],
+                        borderDashOffset: 2,
+                    },
+                },
+                scales: {
+                    x: {
+                        display: true,
+                        title: {
+                            display: true,
+                            text: 'K o d e   U n i v e r s i t a s',
+                            font: {
+                                weight: 'bold',
+                                lineHeight: 1.2
+                            },
+                            padding: { top: 20, left: 0, right: 0, bottom: 0 }
+                        }
+                    },
+                    y: {
+                        display: true,
+                        title: {
+                            display: true,
+                            text: 'P e m i n a t / P e n d a f t a r',
+                            font: {
+                                weight: 'bold',
+                                lineHeight: 1.2
+                            },
+                            padding: { top: 30, left: 0, right: 0, bottom: 0 }
+                        }
+                    }
+                },
+                animations: {
+                    radius: {
+                        duration: 400,
+                        easing: 'linear',
+                        loop: (context) => context.active
+                    }
+                },
+            },
+        };
+    </script>
+    <script>
+        const myChart = new Chart(
+            document.getElementById('myChart'),
+            config
+        );
+    </script>
+
+</body>
+
+</html>
